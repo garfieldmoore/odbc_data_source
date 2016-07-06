@@ -1,0 +1,10 @@
+name    'odbc_data_source'
+version '0.0.1'
+source ''
+author 'Garfield Moore'
+license ''
+summary ''
+description 'Adds a 64bit or 32bit System DSN for Microsoft SQL 2008 or Microsoft SQL 2012.'
+project_page 'https://github.com/creativeview/mssql_system_dsn'
+
+dependency 'puppetlabs/registry', '>= 0.1.1'
