@@ -32,3 +32,6 @@ odbc_data_source::name{"vcenter":
 | 2012 | SQL Server Native Client 11.0 - sqlncli11.dll |
 | 2008 | SQL Server Native Client 10.0 - sqlncli10.dll |
 | SQLNativeClient | SQL Native Client - sqlncli.dll |
+
+##Credits
+This module was based on the [mssql_system_dsn](https://forge.puppet.com/creativeview/mssql_system_dsn)
