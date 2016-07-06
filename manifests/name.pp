@@ -24,7 +24,7 @@ define odbc_data_source::name (
 ) {
     if $dsn_64bit == true
     {
-      odbc_data_source::entry{"{$name}":
+      odbc_data_source::entry{"${name}":
         system_folder       => 'system32',
         hklm_odbc_ini       => 'HKLM\SOFTWARE\ODBC\ODBC.INI',
         hklm_odbc_sources   => 'HKLM\SOFTWARE\ODBC\ODBC.INI\ODBC Data Sources',
@@ -38,7 +38,7 @@ define odbc_data_source::name (
   }
   else
     {
-      odbc_data_source::entry{"{$name}":
+      odbc_data_source::entry{"${name}":
         system_folder      => 'SysWOW64',
         hklm_odbc_ini      => 'HKLM\SOFTWARE\Wow6432Node\ODBC\ODBC.INI',
         hklm_odbc_sources  => 'HKLM\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\ODBC Data Sources',

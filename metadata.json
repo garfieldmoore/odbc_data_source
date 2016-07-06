@@ -7,14 +7,14 @@
     }
   ],
   "description": "Adds a 64bit or 32bit System DSN's.",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "name": "garfieldmoore-odbc_data_source",
   "project_page": "https://github.com/garfieldmoore/odbc_data_source",
   "source": "https://github.com/garfieldmoore/odbc_data_source",
   "summary": "This module adds a ODBC System DSN for a MS SQL 2008 or 2012 database.",
   "issues_url": "https://github.com/garfieldmoore/odbc_data_source/issues",
   "tags": ["odbc", "dsn"],
-  "version": "0.0.1",
+  "version": "0.0.4",
   "operatingsystem_support": [
     {
       "operatingsystem": "Windows",
