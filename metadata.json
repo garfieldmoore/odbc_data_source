@@ -7,7 +7,7 @@
     }
   ],
   "description": "Adds a 64bit or 32bit System DSN's.",
-  "license": "Licensed under (Apache 2.0)",
+  "license": "Apache 2.0",
   "name": "garfieldmoore-odbc_data_source",
   "project_page": "https://github.com/garfieldmoore/odbc_data_source",
   "source": "https://github.com/garfieldmoore/odbc_data_source",
