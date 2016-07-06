@@ -5,6 +5,6 @@ author 'Garfield Moore'
 license ''
 summary ''
 description 'Adds a 64bit or 32bit System DSN for Microsoft SQL 2008 or Microsoft SQL 2012.'
-project_page 'https://github.com/creativeview/mssql_system_dsn'
+project_page 'https://github.com/garfieldmoore/odbc_data_source'
 
 dependency 'puppetlabs/registry', '>= 0.1.1'

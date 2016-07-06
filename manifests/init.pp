@@ -6,14 +6,14 @@
 #
 # Requires: see Modulefile
 # @example:
-#   odbc_data_source::name{"qtxml":
-#          db_name => 'STK',
-#          db_server_ip => 'internal-Innovata-OAT-HostDB-759183424.us-east-1.elb.amazonaws.com',
+#   odbc_data_source::name{"vcenter":
+#          db_name => 'vcdb',
+#          db_server_ip => '192.168.10.12',
 #          sql_version => '2012',
 #          dsn_64bit => false,
-#          user_id => $userId,
-#          description => 'Data source name for the QT XML web service',
-#          trusted_connection =>'No'
+#          user_id => 'mooreg',
+#          description => 'Data source name for vcentre',
+#          trusted_connection =>'Yes'
 #      }
 #
 class odbc_data_source {

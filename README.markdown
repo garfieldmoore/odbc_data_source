@@ -7,7 +7,7 @@ This module adds a ODBC System DSN for a MS SQL 2005, 2008 or 2012 database. Thi
 Run this code on your puppet node using the Puppet Module Tool:
 
 ```bash
-$ puppet module install creativeview/odbc_data_source
+$ puppet module install garfieldmoore/odbc_data_source
 ```
 This module depends on puppetlabs/registry >= 0.1.1
 
