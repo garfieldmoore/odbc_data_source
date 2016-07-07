@@ -1,0 +1,4 @@
+#Puppet puts this in /usr/share/puppet.  Ignore it!
+ext
+.idea
+pkg/
