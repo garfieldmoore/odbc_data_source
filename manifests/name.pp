@@ -24,21 +24,21 @@ define odbc_data_source::name (
 ) {
     if $dsn_64bit == true
     {
-      odbc_data_source::entry{"${name}":
-        system_folder       => 'system32',
-        hklm_odbc_ini       => 'HKLM\SOFTWARE\ODBC\ODBC.INI',
-        hklm_odbc_sources   => 'HKLM\SOFTWARE\ODBC\ODBC.INI\ODBC Data Sources',
-        db_name             => $db_name,
-        db_server           => $db_server_ip,
-        sql_version         => $sql_version,
-        user_id             => $user_id,
-        description         => $description,
-        trusted_connection  => $trusted_connection
+      odbc_data_source::entry{$name:
+        system_folder      => 'system32',
+        hklm_odbc_ini      => 'HKLM\SOFTWARE\ODBC\ODBC.INI',
+        hklm_odbc_sources  => 'HKLM\SOFTWARE\ODBC\ODBC.INI\ODBC Data Sources',
+        db_name            => $db_name,
+        db_server          => $db_server_ip,
+        sql_version        => $sql_version,
+        user_id            => $user_id,
+        description        => $description,
+        trusted_connection => $trusted_connection
     }
   }
   else
     {
-      odbc_data_source::entry{"${name}":
+      odbc_data_source::entry{$name:
         system_folder      => 'SysWOW64',
         hklm_odbc_ini      => 'HKLM\SOFTWARE\Wow6432Node\ODBC\ODBC.INI',
         hklm_odbc_sources  => 'HKLM\SOFTWARE\Wow6432Node\ODBC\ODBC.INI\ODBC Data Sources',

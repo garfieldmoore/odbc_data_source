@@ -1,3 +1,19 @@
+#   - Manages the registry entries for the data source
+#
+# == Requires:
+#   - Registry Module
+# @param system_folder Path of the system folder
+# @param hklm_odbc_ini path to the ODBC\ODBC.INI registry key
+# @param hklm_odbc_sources path to the \ODBC.INI\ODBC Data Sources registry key
+# @param db_name the name of the database
+# @param db_server The ip address or name of the database server
+# @param sql_version The name of the SQL version.  Currently three are supported;
+#         Default  SQL Server Native Client 10.0 (sqlncli10.dll)
+#         2012 - SQL Server Native Client 11.0 (sqlncli11.dll)
+#         SQLNativeClient - SQL Native Client (sqlncli.dll)
+# @param user_id The user id for the database connection. Defaults to Administrator
+# @param description Adds a description for the data source name
+# @param trusted_connection True for a trusted connection.
 define odbc_data_source::entry(
   $system_folder,
   $hklm_odbc_ini,
@@ -6,7 +22,7 @@ define odbc_data_source::entry(
   $db_server,
   $sql_version,
   $last_user='Administrator',
-  $description="",
+  $description='',
   $trusted_connection ='Yes'
   ){
 
@@ -20,7 +36,7 @@ define odbc_data_source::entry(
     $sql_client_name = $sql_client_name_2012
   }
   elsif $sql_version == 'SQLNativeClient'{
-  	$driver_native = "C:\\Windows\\${system_folder}\\sqlncli.dll"
+    $driver_native = "C:\\Windows\\${system_folder}\\sqlncli.dll"
     $sql_client_name_native = 'SQL Native Client'
     $driver=$driver_native
     $sql_client_name = $sql_client_name_native
@@ -80,7 +96,7 @@ define odbc_data_source::entry(
       type  => string,
     }
   }
-  
+
   if ($description != ''){
     registry::value {"${name}_description":
       key   => $hklm_dsn_key,
