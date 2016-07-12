@@ -7,9 +7,11 @@
 # @param hklm_odbc_sources path to the \ODBC.INI\ODBC Data Sources registry key
 # @param db_name the name of the database
 # @param db_server The ip address or name of the database server
-# @param sql_version The name of the SQL version.  Currently three are supported;
-#         Default  SQL Server Native Client 10.0 (sqlncli10.dll)
+# @param sql_version The name of the SQL version.  Currently four are supported;
+#         Default - Windows Native SQL Server  (sqlsrv32.dll)
+#         SQLServer - Windows Native SQL Server  (sqlsrv32.dll)
 #         2012 - SQL Server Native Client 11.0 (sqlncli11.dll)
+#         2008 - SQL Server Native Client 10.0 (sqlncli10.dll)
 #         SQLNativeClient - SQL Native Client (sqlncli.dll)
 # @param user_id The user id for the database connection. Defaults to Administrator
 # @param description Adds a description for the data source name
@@ -35,16 +37,28 @@ define odbc_data_source::entry(
     $driver=$driver_2012
     $sql_client_name = $sql_client_name_2012
   }
+  elsif $sql_version == '2008'{
+    $driver_2008 = "C:\\Windows\\${system_folder}\\sqlncli10.dll"
+    $sql_client_name_2008 = 'SQL Server Native Client 10.0'
+    $driver=$driver_2008
+    $sql_client_name = $sql_client_name_2008
+  }
   elsif $sql_version == 'SQLNativeClient'{
     $driver_native = "C:\\Windows\\${system_folder}\\sqlncli.dll"
     $sql_client_name_native = 'SQL Native Client'
     $driver=$driver_native
     $sql_client_name = $sql_client_name_native
   }
+  elsif $sql_version == 'SQLServer'{
+    $driver_other = "C:\\Windows\\${system_folder}\\SQLSRV32.dll"
+    $sql_client_name_other = 'SQL Server'
+    $driver=$driver_other
+    $sql_client_name = $sql_client_name_other
+  }
   else
   {
-      $driver_other = "C:\\Windows\\${system_folder}\\sqlncli10.dll"
-      $sql_client_name_other = 'SQL Server Native Client 10.0'
+      $driver_other = "C:\\Windows\\${system_folder}\\SQLSRV32.dll"
+      $sql_client_name_other = 'SQL Server'
       $driver=$driver_other
       $sql_client_name = $sql_client_name_other
   }
