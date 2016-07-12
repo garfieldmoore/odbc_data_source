@@ -6,7 +6,7 @@
 #
 # Requires: see Modulefile
 # @example:
-#   odbc_data_source::name{"vcenter":
+#   odbc_data_source::name{ 'vcenter':
 #          db_name => 'vcdb',
 #          db_server_ip => '192.168.10.12',
 #          sql_version => '2012',
