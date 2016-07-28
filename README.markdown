@@ -15,7 +15,7 @@ This module depends on puppetlabs/registry >= 0.1.1
 Example usage:
 
 ```puppet
-odbc_data_source::name{"vcenter":
+odbc_data_source::name{ 'vcenter':
           db_name => 'vcdb',
           db_server_ip => '102.168.10.34',
           sql_version => '2012',
@@ -29,6 +29,7 @@ odbc_data_source::name{"vcenter":
 
 | Value  | Driver |
 | ------------- | ------------- |
+| SQLServer | SQL Server - sqlserver32.dll |
 | 2012 | SQL Server Native Client 11.0 - sqlncli11.dll |
 | 2008 | SQL Server Native Client 10.0 - sqlncli10.dll |
 | SQLNativeClient | SQL Native Client - sqlncli.dll |

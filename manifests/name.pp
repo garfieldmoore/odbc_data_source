@@ -4,9 +4,11 @@
 #   - Registry Module
 # @param db_name the name of the database
 # @param db_server_ip The ip address or name of the database server
-# @param sql_version The name of the SQL version.  Currently three are supported;
-#         Default  SQL Server Native Client 10.0 (sqlncli10.dll)
+# @param sql_version The name of the SQL version.  Currently four are supported;
+#         Default - Windows Native SQL Server  (sqlsrv32.dll)
+#         SQLServer - Windows Native SQL Server  (sqlsrv32.dll)
 #         2012 - SQL Server Native Client 11.0 (sqlncli11.dll)
+#         2008 - SQL Server Native Client 10.0 (sqlncli10.dll)
 #         SQLNativeClient - SQL Native Client (sqlncli.dll)
 # @param dsn_64bit True for a 64 bit DSN, otherwise a 32 bit DSN is created
 # @param user_id The user id for the database connection. Defaults to Administrator
