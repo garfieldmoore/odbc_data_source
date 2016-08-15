@@ -32,5 +32,5 @@ task :validate do
 end
 
 RSpec::Core::RakeTask.new(:test) do |t|
-   t.pattern = 'spec/*/*_spec.rb'
+   t.pattern = './spec/*_spec.rb'
 end
