@@ -1,0 +1,77 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    diff-lcs (1.2.5)
+    facter (2.4.6-x86-mingw32)
+      ffi (~> 1.9.5)
+      win32-dir (~> 0.4.8)
+      win32-security (~> 0.2.5)
+      win32console (~> 1.3.2)
+    ffi (1.9.14-x86-mingw32)
+    hiera (3.2.1-x86-mingw32)
+      win32-dir (~> 0.4.8)
+      win32console (= 1.3.2)
+    json_pure (1.8.3)
+    metaclass (0.0.4)
+    minitar (0.5.4)
+    mocha (1.1.0)
+      metaclass (~> 0.0.1)
+    puppet (4.6.0-x86-mingw32)
+      facter (> 2.0, < 4)
+      ffi (~> 1.9.6)
+      hiera (>= 2.0, < 4)
+      json_pure (~> 1.8)
+      minitar (~> 0.5.4)
+      win32-dir (= 0.4.9)
+      win32-eventlog (= 0.6.5)
+      win32-process (= 0.7.5)
+      win32-security (= 0.2.5)
+      win32-service (= 0.8.8)
+    puppet-lint (2.0.0)
+    puppet-syntax (2.1.0)
+      rake
+    puppetlabs_spec_helper (1.1.1)
+      mocha
+      puppet-lint
+      puppet-syntax
+      rake
+      rspec-puppet
+    rake (11.2.2)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.2)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-mocks (3.5.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.5.0)
+    rspec-puppet (2.4.0)
+      rspec
+    rspec-support (3.5.0)
+    win32-dir (0.4.9)
+      ffi (>= 1.0.0)
+    win32-eventlog (0.6.5)
+      ffi
+    win32-process (0.7.5)
+      ffi (>= 1.0.0)
+    win32-security (0.2.5)
+      ffi
+    win32-service (0.8.8)
+      ffi
+    win32console (1.3.2-x86-mingw32)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  facter (>= 1.7.0)
+  puppet (>= 3.3)
+  puppet-lint (>= 1.0.0)
+  puppetlabs_spec_helper (>= 0.8.2)
+
+BUNDLED WITH
+   1.12.5
