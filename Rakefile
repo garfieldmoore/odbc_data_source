@@ -30,3 +30,11 @@ task :validate => [:checks, :lint]
 RSpec::Core::RakeTask.new(:test) do |t|
    t.pattern = './spec/*_spec.rb'
 end
+
+task :apply do
+
+  Dir['examples/**/*.pp'].each do |manifest|
+    sh "puppet apply --noop #{manifest} --modulepath .."
+  end
+
+end
