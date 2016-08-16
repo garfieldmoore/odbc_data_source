@@ -2,13 +2,16 @@ require 'rake'
 require 'puppetlabs_spec_helper/rake_tasks'
 require 'puppet-lint/tasks/puppet-lint'
 require 'rspec/core/rake_task'
-#require 'puppet-lint'
+require 'puppet-lint'
+require 'puppet-lint/tasks/puppet-lint'
+
+#PuppetLint::Plugins.load_spec_helper
 
 PuppetLint.configuration.send('disable_80chars')
-PuppetLint.configuration.ignore_paths = ["spec/**/*.pp", "pkg/**/*.pp"]
+PuppetLint.configuration.ignore_paths = ["spec/**/*.pp", "pkg/**/*.pp", "packages/**/**.pp"]
 
 desc "Validate manifests, templates, and ruby files"
-task :validate do
+task :checks do
   Dir['manifests/**/*.pp'].each do |manifest|
     sh "puppet parser validate --noop #{manifest}"
   end
@@ -20,16 +23,9 @@ task :validate do
   Dir['templates/**/*.erb'].each do |template|
     sh "erb -P -x -T '-' #{template} | ruby -c"
   end
-
-  desc "Run lint check on puppet manifests"
-  linter =  PuppetLint.new
-  Dir.glob('./manifists//**/*.pp').each do |puppet_file|
-    puts "Evaluating #{puppet_file}"
-    linter.file = puppet_file
-    linter.run
-  end
-  fail if linter.errors?
 end
+
+task :validate => [:checks, :lint]
 
 RSpec::Core::RakeTask.new(:test) do |t|
    t.pattern = './spec/*_spec.rb'
