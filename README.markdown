@@ -1,6 +1,8 @@
 # Microsoft SQL ODBC System DSN puppet module.
 
-This module adds a ODBC System DSN for a MS SQL 2005, 2008 or 2012 database. This has been tested on Windows Server 2012.  
+This module creates ODBC System DSN's for MS SQL 2005, 2008 or 2012 database. It is possible to create multiple DSN's per node.
+
+This has been tested on Windows Server 2012.  
 
 ## Installation
 
@@ -24,6 +26,7 @@ odbc_data_source::name{ 'vcenter':
           trusted_connection =>'Yes'
       }
 ```
+See the examples for usage.
 
 ##### sql_version parameter options
 
@@ -35,4 +38,4 @@ odbc_data_source::name{ 'vcenter':
 | SQLNativeClient | SQL Native Client - sqlncli.dll |
 
 ##Credits
-This module was based on the [mssql_system_dsn](https://forge.puppet.com/creativeview/mssql_system_dsn)
+This module was based on the [mssql_system_dsn](https://forge.puppet.com/creativeview/mssql_system_dsn) project.

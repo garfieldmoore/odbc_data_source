@@ -2,3 +2,5 @@
 ext
 .idea
 pkg/
+.bundle/
+packages/

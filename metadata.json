@@ -15,7 +15,7 @@
   "summary": "This module adds a ODBC System DSN for a MS SQL 2008 or 2012 database.",
   "issues_url": "https://github.com/garfieldmoore/odbc_data_source/issues",
   "tags": ["odbc", "dsn"],
-  "version": "0.1.0",
+  "version": "1.0.0",
   "operatingsystem_support": [
     {
       "operatingsystem": "Windows",
