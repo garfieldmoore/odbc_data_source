@@ -33,7 +33,7 @@ define odbc_data_source::name (
         db_name            => $db_name,
         db_server          => $db_server_ip,
         sql_version        => $sql_version,
-        user_id            => $user_id,
+        last_user          => $user_id,
         description        => $description,
         trusted_connection => $trusted_connection
     }
