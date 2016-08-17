@@ -2,8 +2,7 @@
   "author": "Garfied Moore",
   "dependencies": [
     {
-      "name": "puppetlabs/registry",
-      "version_requirement": "0.0.1",
+      "name": "puppetlabs/registry", "version_requirement": "0.0.1",
       "name": "puppetlabs/stdlib", "version_requirement": ">=4.2.0 < 5.0.0"
     }
   ],
