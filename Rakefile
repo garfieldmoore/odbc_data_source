@@ -4,11 +4,14 @@ require 'puppet-lint/tasks/puppet-lint'
 require 'rspec/core/rake_task'
 require 'puppet-lint'
 require 'puppet-lint/tasks/puppet-lint'
+#require 'puppet_blacksmith/rake_tasks'
 
 #PuppetLint::Plugins.load_spec_helper
 
+excludes = ["spec/**/*", "pkg/**/*", "packages/**/*"]
 PuppetLint.configuration.send('disable_80chars')
-PuppetLint.configuration.ignore_paths = ["spec/**/*.pp", "pkg/**/*.pp", "packages/**/**.pp"]
+PuppetLint.configuration.ignore_paths = excludes
+PuppetLint.configuration.exclude_paths = excludes
 
 desc "Validate manifests, templates, and ruby files"
 task :checks do
