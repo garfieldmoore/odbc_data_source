@@ -4,7 +4,7 @@ require 'puppet-lint/tasks/puppet-lint'
 require 'rspec/core/rake_task'
 require 'puppet-lint'
 require 'puppet-lint/tasks/puppet-lint'
-#require 'puppet_blacksmith/rake_tasks'
+require 'puppet_blacksmith/rake_tasks'
 
 #PuppetLint::Plugins.load_spec_helper
 
