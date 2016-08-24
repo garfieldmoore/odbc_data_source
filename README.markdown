@@ -1,4 +1,4 @@
-# Microsoft SQL ODBC System DSN puppet module [![Build Status](https://travis-ci.org/garfieldmoore/odbc_data_source)](https://travis-ci.org/garfieldmoore/odbc_data_source)
+# Microsoft SQL ODBC System DSN puppet module [![Build Status](https://travis-ci.org/garfieldmoore/odbc_data_source.svg?branch=master)](https://travis-ci.org/garfieldmoore/odbc_data_source)
 
 This module creates ODBC System DSN's for MS SQL 2005, 2008 or 2012 database. It is possible to create multiple DSN's per node.
 
